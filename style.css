@@ -1,0 +1,17 @@
+:root {
+	--bg-white-color: #fff;
+	--bg-black-color: #000;
+	--headline-color: #1d1d1f;
+	--link-color: #217ad3;
+
+	--headline-font-size: 48px;
+	--subheadline-font-size: 24px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 1em;
+	font-family: '-apple-system', 'BlinkMacSystemFont', 'sans-serif';
+}

@@ -8,10 +8,50 @@
 	--subheadline-font-size: 24px;
 }
 
-body {
+/* ----- Base styles ----- */
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-size: 1em;
+}
+body {
+	font-size: 0.8rem;
 	font-family: '-apple-system', 'BlinkMacSystemFont', 'sans-serif';
+	font-weight: 300;
+}
+.container {
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+}
+img {
+	width: 100%;
+}
+ul {
+	list-style: none;
+}
+
+/* ----- HEADER ----- */
+header {
+	background-color: #333;
+	color: rgba(255, 255, 255, 0.705);
+}
+header nav {
+	padding: 0.9em;
+}
+header nav ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+header nav ul li {
+	cursor: pointer;
+}
+header nav ul li img {
+	width: 17px;
+	color: #fff;
+}
+header nav ul li #bag,
+header nav ul li #search {
+	width: 15px;
 }

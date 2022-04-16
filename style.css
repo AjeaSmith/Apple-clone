@@ -30,11 +30,23 @@ img {
 ul {
 	list-style: none;
 }
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
 
 /* ----- HEADER ----- */
 header {
 	background-color: #333;
 	color: rgba(255, 255, 255, 0.705);
+	position: fixed;
+	width: 100%;
 }
 header nav {
 	padding: 0.9em;
@@ -55,13 +67,51 @@ header nav ul li #bag,
 header nav ul li #search {
 	width: 15px;
 }
+.mobile-nav-toggle {
+	position: absolute;
+	width: 2rem;
+	background: url('./images/Icons/hamburger.svg');
+	background-repeat: no-repeat;
+	aspect-ratio: 1;
+	border: 0;
+	top: 0.4rem;
+	left: 2rem;
+	cursor: pointer;
+}
+@media screen and (min-width: 835px) {
+	.mobile-nav-toggle {
+		display: none;
+	}
+}
 
 /* ------ HERO ------ */
-main .hero .hero__wrap--content {
+main .hero {
 	background: url('./images/Apple-hero.jpeg');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-
-	height: 80vh;
+	height: 93vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+main .hero .hero__wrap--content {
+	margin-top: 75px;
+	text-align: center;
+}
+main .hero .hero__wrap--content h2 {
+	font-size: var(--headline-font-size);
+	font-weight: 500;
+}
+main .hero .hero__wrap--content h3 {
+	font-size: var(--subheadline-font-size);
+	font-weight: 300;
+	margin-bottom: 0.74em;
+}
+main .hero .hero__wrap--content .hero__wrap--links a {
+	color: var(--link-color);
+	text-decoration: none;
+	font-size: 19px;
+	margin-right: 0.7em;
+	font-weight: 400;
 }

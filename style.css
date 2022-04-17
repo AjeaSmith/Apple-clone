@@ -73,11 +73,44 @@ header nav ul li #bag,
 header nav ul li #search {
 	width: 15px;
 }
-
 header #hamburger-menu {
 	display: none;
 }
-@media screen and (max-width: 967px) {
+
+/* ------ HERO ------ */
+main .hero {
+	background: url('./images/Apple-hero.jpeg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 98vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+main .hero .hero__wrap--content {
+	margin-top: 75px;
+	text-align: center;
+}
+main .hero .hero__wrap--content h2 {
+	font-size: var(--headline-font-size);
+	font-weight: 500;
+}
+main .hero .hero__wrap--content h3 {
+	font-size: var(--subheadline-font-size);
+	font-weight: 300;
+	margin-bottom: 0.74em;
+}
+main .hero .hero__wrap--content .hero__wrap--links a {
+	color: var(--link-color);
+	text-decoration: none;
+	font-size: 19px;
+	margin-right: 0.7em;
+	font-weight: 400;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 967px) {
 	header {
 		height: 55px;
 		border-bottom: 1px solid lightgrey;
@@ -118,34 +151,23 @@ header #hamburger-menu {
 		cursor: pointer;
 	}
 }
-/* ------ HERO ------ */
-main .hero {
-	background: url('./images/Apple-hero.jpeg');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	height: 93vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-main .hero .hero__wrap--content {
-	margin-top: 75px;
-	text-align: center;
-}
-main .hero .hero__wrap--content h2 {
-	font-size: var(--headline-font-size);
-	font-weight: 500;
-}
-main .hero .hero__wrap--content h3 {
-	font-size: var(--subheadline-font-size);
-	font-weight: 300;
-	margin-bottom: 0.74em;
-}
-main .hero .hero__wrap--content .hero__wrap--links a {
-	color: var(--link-color);
-	text-decoration: none;
-	font-size: 19px;
-	margin-right: 0.7em;
-	font-weight: 400;
+@media only screen and (max-width: 736px) {
+	main .hero {
+		background: url('./images/Apple-hero_mobile.jpeg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	main .hero .hero__wrap--content {
+		margin-top: 100px;
+	}
+	main .hero .hero__wrap--content h2 {
+		font-size: 32px;
+		font-weight: 500;
+	}
+	main .hero .hero__wrap--content h3 {
+		font-size: 19px;
+		font-weight: 300;
+		margin-bottom: 0.74em;
+	}
 }

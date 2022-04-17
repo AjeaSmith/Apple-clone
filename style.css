@@ -94,6 +94,7 @@ header #hamburger-menu {
 		top: 55px;
 		width: 100%;
 		padding: 1em 1.5em;
+		display: none;
 	}
 	header #hamburger-menu .mobile-menu li {
 		cursor: pointer;

@@ -47,9 +47,13 @@ header {
 	color: rgba(255, 255, 255, 0.705);
 	position: fixed;
 	width: 100%;
+	height: auto;
 }
 header nav {
-	padding: 0.9em;
+	padding: 1em;
+}
+header nav #primary-nav {
+	padding-top: 0;
 }
 header nav ul {
 	display: flex;
@@ -57,9 +61,11 @@ header nav ul {
 	justify-content: space-between;
 }
 header nav ul li {
-	cursor: pointer;
+	font-size: 1rem;
+	margin-bottom: 0;
 }
 header nav ul li img {
+	display: block;
 	width: 17px;
 	color: #fff;
 }
@@ -67,23 +73,50 @@ header nav ul li #bag,
 header nav ul li #search {
 	width: 15px;
 }
-.mobile-nav-toggle {
-	position: absolute;
-	width: 2rem;
-	background: url('./images/Icons/hamburger.svg');
-	background-repeat: no-repeat;
-	aspect-ratio: 1;
-	border: 0;
-	top: 0.4rem;
-	left: 2rem;
-	cursor: pointer;
+
+header #hamburger-menu {
+	display: none;
 }
-@media screen and (min-width: 835px) {
-	.mobile-nav-toggle {
+@media screen and (max-width: 967px) {
+	header {
+		height: 55px;
+		border-bottom: 1px solid lightgrey;
+	}
+	header #hamburger-menu {
+		display: block;
+	}
+	header nav {
 		display: none;
 	}
+	header #hamburger-menu .mobile-menu {
+		background-color: #333;
+		position: absolute;
+		top: 55px;
+		width: 100%;
+		padding: 1em 1.5em;
+	}
+	header #hamburger-menu .mobile-menu li {
+		cursor: pointer;
+		font-size: 1.2rem;
+		margin-bottom: 1em;
+		padding: 0.5em;
+	}
+	header #hamburger-menu .mobile-menu li:hover {
+		background: black;
+		color: #fff;
+	}
+	.mobile-nav-toggle {
+		position: absolute;
+		width: 2rem;
+		background: url('./images/Icons/hamburger.svg');
+		background-repeat: no-repeat;
+		aspect-ratio: 1;
+		border: 0;
+		top: 0.7rem;
+		left: 1.5rem;
+		cursor: pointer;
+	}
 }
-
 /* ------ HERO ------ */
 main .hero {
 	background: url('./images/Apple-hero.jpeg');

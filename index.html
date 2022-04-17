@@ -8,15 +8,8 @@
 	</head>
 	<body>
 		<header>
-			<div class="container">
-				<button
-					aria-controls="primary-nav"
-					aria-expanded="false"
-					class="mobile-nav-toggle"
-				>
-					<span class="sr-only">Menu</span>
-				</button>
-				<nav>
+			<nav>
+				<div class="container">
 					<ul id="primary-nav" class="header__menu">
 						<li>
 							<img
@@ -49,7 +42,28 @@
 							/>
 						</li>
 					</ul>
-				</nav>
+				</div>
+			</nav>
+			<div id="hamburger-menu" onclick="toggleMobileMenu(this)">
+				<button
+					aria-controls="primary-nav"
+					aria-expanded="false"
+					class="mobile-nav-toggle"
+				>
+					<span class="sr-only">Menu</span>
+				</button>
+				<ul class="mobile-menu">
+					<li>Store</li>
+					<li>Mac</li>
+					<li>iPad</li>
+					<li>iPhone</li>
+					<li>Watch</li>
+					<li>AirPods</li>
+					<li>TV & Home</li>
+					<li>Only on Apple</li>
+					<li>Accessories</li>
+					<li>Support</li>
+				</ul>
 			</div>
 		</header>
 		<main>
@@ -329,5 +343,6 @@
 				</section>
 			</footer>
 		</main>
+		<script src="./nav.js"></script>
 	</body>
 </html>
